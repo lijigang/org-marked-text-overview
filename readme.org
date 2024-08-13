@@ -1,0 +1,22 @@
+#+title: Readme
+
+** Description
+读纸书时, 会用笔在书中做标记, 后续重读时, 快速翻阅标记，有助于快速回顾书中重点内容。
+
+读电子书/文章时，会用标记语法来实现同样功能。但电子标记，没办法像纸书一样快速翻阅。所以才有了这个 Package：以列表形式，展示 orgmode 文件中所有标记内容，并支持跳转到对应原文位置。
+
+** Let me see it
+[[file:images/org-marked-text-overview-demo.png]]
+
+** Install
+(use-package! org-marked-text-overview
+  :load-path  "~/Documents/emacs/local-packages/org-marked-text-overview"
+  :after org
+  :bind ("M-s-l" . org-marked-text-overview-mode))
+
+** Usage
+;; 查看标记的文本
+M-x: org-marked-text-overview-mode
+
+;; 跳转到对应原文
+M-x: org-marked-text-overview-jump-to-original
